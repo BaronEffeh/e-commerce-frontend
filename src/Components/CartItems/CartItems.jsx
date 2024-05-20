@@ -22,9 +22,9 @@ const CartItems = () => {
                   <div className="cartitems-format cartitems-format-main">
                      <img src={e.image} alt="" className='carticon-product-icon' />
                      <p>{e.name}</p>
-                     <p>N{e.new_price}</p>
+                     <p><span style={{ textDecorationLine: "line-through", textDecorationStyle: "double" }}>N</span>{e.new_price}</p>
                      <button className='cartitems-quantity'>{cartItems[e.id]}</button>
-                     <p>N{e.new_price * cartItems[e.id]}</p>
+                     <p><span style={{ textDecorationLine: "line-through", textDecorationStyle: "double" }}>N</span>{e.new_price * cartItems[e.id]}</p>
                      <img className='cartitems-remove-icon' src={remove_icon} onClick={() => { removeFromCart(e.id) }} alt="" />
                   </div>
                   <hr />
@@ -38,7 +38,7 @@ const CartItems = () => {
                <div>
                   <div className="cartitems-total-item">
                      <p>Subtatal</p>
-                     <p>${getTotalCartAmount()}</p>
+                     <p><span style={{ textDecorationLine: "line-through", textDecorationStyle: "double" }}>N</span>{getTotalCartAmount()}</p>
                   </div>
                   <hr />
                   <div className="cartitems-total-item">
@@ -48,7 +48,7 @@ const CartItems = () => {
                   <hr />
                   <div className="cartitems-total-item">
                      <h3>Total</h3>
-                     <h3>${getTotalCartAmount()}</h3>
+                     <h3><span style={{ textDecorationLine: "line-through", textDecorationStyle: "double" }}>N</span>{getTotalCartAmount()}</h3>
                   </div>
                </div>
                <button>PROCEED TO CHECKOUT</button>

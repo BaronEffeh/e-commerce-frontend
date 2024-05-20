@@ -31,6 +31,10 @@
    font-weight: 500;
 }
 
+.nav-menu a {
+   color: #626262;
+}
+
 .nav-menu li {
    display: flex;
    flex-direction: column;
